@@ -15,7 +15,7 @@
   z-index: 9999;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255);
 }
 .loader {
   width: 70px;

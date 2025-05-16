@@ -68,6 +68,13 @@ const onDrag = (e) => {
 const stopDrag = () => {
   isDragging.value = false
 }
+
+const onWheel = (e) => {
+  if (e.ctrlKey) {
+    e.preventDefault()
+    scrollContainer.value.scrollLeft += e.deltaY
+  }
+}
 </script>
 
 <template>
@@ -103,6 +110,7 @@ const stopDrag = () => {
       @mousemove="onDrag"
       @mouseup="stopDrag"
       @mouseleave="stopDrag"
+      @wheel="onWheel"
     >
       <div class="category">
         <LaunchCard v-for="item in filteredCourses" :key="item.id" :course="item" />
