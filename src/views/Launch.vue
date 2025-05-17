@@ -11,7 +11,7 @@ const selectedCategory = ref(null)
 
 onMounted(async () => {
   isLoading.value = true
-  const response = await fetch('/api/v1/launches/external/course/research/')
+  const response = await fetch('https://main.proweb.uz/api/v1/launches/external/course/research/')
   const data = await response.json()
   courses.results = data.results
   isLoading.value = false
